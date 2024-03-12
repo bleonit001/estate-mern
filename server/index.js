@@ -1,6 +1,7 @@
 import express from "express";
 import mongoonse from 'mongoose';
 import dotenv from 'dotenv';
+import userRouter from "./routes/user.routes.js";
 dotenv.config();
 
 mongoonse.connect(process.env.MONGO).then(() => {
@@ -18,7 +19,4 @@ app.listen(3000, () =>{
 );
 
 
-app.get('/test', (req,res) =>{
-    res.send('Hello World!');
-}
-);
+app.use("/api/user", userRouter)
