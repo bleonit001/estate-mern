@@ -169,7 +169,7 @@ return (
         </button>   
         <Link
     className='bg-green-700 text-white p3 rounded-lg uppercase text-center hover:opacity-95'
-    to={'/create-lisitng'}
+    to={'/create-listing'}
   >
     Create Listing
   </Link>
